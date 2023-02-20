@@ -1,5 +1,5 @@
 const initialState = {
-//   name: "Mohan",
+  name: "Mohan",
 };
 
 export default function reducer(state = initialState, action) {

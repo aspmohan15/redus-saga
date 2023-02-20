@@ -1,4 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
+import Child from "./components/Child";
 import { getUser, setUser } from "./reduxSaga/actions/userActions";
 
 function App() {
@@ -9,6 +10,10 @@ function App() {
   const getData = () => {
     // dispatch(setUser({ name: "Instagram" }));
     dispatch(getUser());
+  };
+
+  const childToParent = (dataFromChild) => {
+    console.log(dataFromChild);
   };
   return (
     <div className="App">
@@ -33,6 +38,7 @@ function App() {
             </div>
           )}
         </div>
+        <Child childToParent={childToParent} />
       </div>
     </div>
   );
